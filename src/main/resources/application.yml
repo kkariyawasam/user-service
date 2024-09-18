@@ -1,0 +1,23 @@
+spring:
+  application:
+    name: user-service
+  datasource:
+    url: jdbc:mysql://localhost:3306/springsecurity?useSSL=false
+    username: root
+    password: 123456
+    driver-class-name: com.mysql.cj.jdbc.Driver  # Correct MySQL driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        format-sql: true
+      show-sql: true
+      database: mysql
+      database-platform: org.hibernate.dialect.MySQL8Dialect
+logging:
+  level:
+    org.springframework.security: TRACE
+    
+jwt:
+  secret:  9a2f8c4e6b0d71f3e8b925a45747f894a3d6bc70fa8d5e21a15a6d8c3b9a0e7c
